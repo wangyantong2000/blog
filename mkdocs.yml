@@ -18,6 +18,7 @@ theme:
   icon:
     repo: fontawesome/brands/github #右上角图标
   features:
+    - navigation.expand
     - announce.dismiss
     - content.action.edit
     # - content.action.view
@@ -57,7 +58,41 @@ theme:
       toggle:
         icon: material/weather-night
         name: 切换至浅色模式
-
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  # - pymdownx.emoji:
+  #     emoji_index: !!python/name:materialx.emoji.twemoji
+  #     emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  # - pymdownx.magiclink:
+  #     repo_url_shorthand: true
+  #     user: squidfunk
+  #     repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
 extra:
   alternate:
     - name: 简体中文
@@ -97,7 +132,11 @@ extra:
 nav:
   # - 主页: index.md
   - 教程:
-      - 作业总结与反思:blog/zongjie.md
+      - MKdocs教程:
+          - MKdocs使用教程-安装: blog/MKdocs/MKdocs.md
+          - MKdocs使用教程-入门: blog/MKdocs/MKdocs1.md
+      - blog作业:
+          - 作业总结与反思: blog/zongjie.md
 
 plugins:
   - glightbox
