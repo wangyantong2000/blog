@@ -130,13 +130,16 @@ extra:
 # generator: false
 
 nav:
-  # - 主页: index.md
+  - 主页: index.md
   - 教程:
       - MKdocs教程:
           - MKdocs使用教程-安装: blog/MKdocs/MKdocs.md
           - MKdocs使用教程-入门: blog/MKdocs/MKdocs1.md
       - blog作业:
           - 作业总结与反思: blog/zongjie.md
+  - 标签: tag.md
+  - Blogger:
+      - index: blog/index.md
 
 plugins:
   - glightbox
@@ -146,9 +149,25 @@ plugins:
       locale: zh
       enable_creation_date: true
       type: date
-      exclude: #排除的页面
+      exclude:
         - index.md
+        - tag.md
   - git-committers:
       enabled: !ENV [CI, false]
       repository: wangyantong2000/blog
-      branch: main
+      branch: master
+
+  - tags:
+      tags_file: tag.md #分类标签
+  - blog: #博客配置
+      post_date_format: full #时间
+      draft: true
+      draft_if_future_date: true #自动将具有未来日期的帖子标记为草稿
+      post_readtime: true
+      post_readtime_words_per_minute: 265 #计算帖子的阅读时间时读者每分钟预计阅读的字数
+      post_url_format: "{date}/{slug}"
+      # categories_slugify: !!python/object/apply:pymdownx.slugs.slugify
+      #   kwds:
+      #     case: lower
+      pagination_url_format: "page/{page}"
+      authors_file: "{blog}/.authors.yml" #作者信息

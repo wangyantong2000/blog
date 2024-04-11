@@ -1,3 +1,9 @@
+---
+title: Mkdocs使用教程-入门
+tags:
+  - Mkdocs
+---
+
 # 新建网站
 
 在完成[Material for MkDocs 的安装][1]后，可以使用`mkdocs`相关命令来启动文档。转到要放置项目的目录，然后输入：

@@ -1,3 +1,9 @@
+---
+title: Mkdocs使用教程-安装
+tags:
+  - Mkdocs
+---
+
 # 入门
 
 Material for MkDocs 是[MkDocs][1]的一个主题，[MkDocs][1]是一个用于生成静态页面的程序。如果熟悉 Python 的话，可以使用[`pip`][2]这个 Python 的包管理器来安装 Material for MkDocs。如果不熟悉的话，推荐使用[`docker`][3]来安装。
