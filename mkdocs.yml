@@ -5,21 +5,18 @@ repo_name: 王衍童的blog
 repo_url: https://github.com/wangyantong2000/blog
 edit_uri: tree/main/docs
 
-theme:
-  name: material
-  language: zh
-  logo: img/w.png
-  favicon: img/w.png
-
 # Copyright
 copyright: Copyright &copy; 2022-2024 krahets<br>The website content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
 
 # Configuration
 theme:
   name: material
+  favicon: img/favicon.png
 
+  logo: assets/favicon.png
   language: zh
-
+  icon:
+    repo: fontawesome/brands/github #右上角图标
   features:
     - announce.dismiss
     - content.action.edit
@@ -50,44 +47,69 @@ theme:
   palette:
     - scheme: default
       primary: white
-      accent: teal
+      accent: indigo
       toggle:
-        icon: material/theme-light-dark
-        name: 深色模式
+        icon: material/weather-sunny
+        name: 切换至深色模式
     - scheme: slate
       primary: black
-      accent: teal
+      accent: indigo
       toggle:
-        icon: material/theme-light-dark
-        name: 浅色模式
-  
+        icon: material/weather-night
+        name: 切换至浅色模式
 
+extra:
+  alternate:
+    - name: 简体中文
+      link: /
+      lang: zh
+  generator: false
+  analytics:
+    provider: google #谷歌分析
 
-# extra:
-#   alternate:
-#     - name: 简体中文
-#       link: /
-#       lang: zh
-#     - name: 繁體中文
-#       link: /zh-hant/
-#       lang: zh-Hant
-#     - name: English
-#       link: /en/
-#       lang: en
- 
-  # generator: false
-  # status:
-  #   new: 最近添加
+    property:
+
+    # 网页底部反馈
+    feedback:
+      title: 此页面有帮助吗？
+      ratings:
+        - icon: material/thumb-up-outline #图标可自定义
+          name: This page was helpful
+          data: 1
+          note: >-
+            谢谢你的反馈！
+        - icon: material/thumb-down-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/wangyantong2000
+
+    - icon: fontawesome/regular/envelope #联系方式图标
+      link: mailto:<1539881814@qq.com> #邮件联系方式
+  status:
+    new: 最近添加
+# generator: false
+
 nav:
-    - 主页: index.md
+  # - 主页: index.md
+  - 教程:
+      - 作业总结与反思:blog/zongjie.md
+
 plugins:
-        - glightbox
-        - search:
-                  separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-        - git-revision-date-localized: # 支持文档创建时间显示， https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
-                  locale: zh
-                  enable_creation_date: true
-                  type: date
-                  exclude:  #排除的页面
-                    - index.md
- 
+  - glightbox
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - git-revision-date-localized: # 支持文档创建时间显示， https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
+      locale: zh
+      enable_creation_date: true
+      type: date
+      exclude: #排除的页面
+        - index.md
+  - git-committers:
+      enabled: !ENV [CI, false]
+      repository: wangyantong2000/blog
+      branch: main
