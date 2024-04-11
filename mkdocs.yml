@@ -1,6 +1,6 @@
 site_name: 王衍童的博客
 
-site_url: https://wangyantong2000.github.io/shuzikeben/
+site_url: https://wangyantong2000.github.io/blog/
 repo_name: 王衍童的blog
 repo_url: https://github.com/wangyantong2000/blog
 edit_uri: tree/main/docs
@@ -8,6 +8,8 @@ edit_uri: tree/main/docs
 theme:
   name: material
   language: zh
+  logo: img/w.png
+  favicon: img/w.png
 
 # Copyright
 copyright: Copyright &copy; 2022-2024 krahets<br>The website content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
@@ -79,8 +81,13 @@ theme:
 nav:
     - 主页: index.md
 plugins:
-
-  - glightbox
-    
-
+        - glightbox
+        - search:
+                  separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+        - git-revision-date-localized: # 支持文档创建时间显示， https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
+                  locale: zh
+                  enable_creation_date: true
+                  type: date
+                  exclude:  #排除的页面
+                    - index.md
  
