@@ -1,0 +1,86 @@
+site_name: 王衍童的博客
+
+site_url: https://wangyantong2000.github.io/shuzikeben/
+repo_name: 王衍童的blog
+repo_url: https://github.com/wangyantong2000/blog
+edit_uri: tree/main/docs
+
+theme:
+  name: material
+  language: zh
+
+# Copyright
+copyright: Copyright &copy; 2022-2024 krahets<br>The website content is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+
+# Configuration
+theme:
+  name: material
+
+  language: zh
+
+  features:
+    - announce.dismiss
+    - content.action.edit
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - content.code.copy # 代码支持拷贝
+    # - header.autohide
+    # - navigation.expand
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.prune
+    # - navigation.sections
+    # - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.tabs # 顶部导航
+    - navigation.tabs.sticky # 顶部导航粘连
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    # - toc.integrate
+  palette:
+    - scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: 深色模式
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/theme-light-dark
+        name: 浅色模式
+  
+
+
+# extra:
+#   alternate:
+#     - name: 简体中文
+#       link: /
+#       lang: zh
+#     - name: 繁體中文
+#       link: /zh-hant/
+#       lang: zh-Hant
+#     - name: English
+#       link: /en/
+#       lang: en
+ 
+  # generator: false
+  # status:
+  #   new: 最近添加
+nav:
+    - 主页: index.md
+plugins:
+
+  - glightbox
+    
+
+ 
