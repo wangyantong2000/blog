@@ -2,6 +2,7 @@
 title: Mkdocs使用教程-入门
 tags:
   - Mkdocs
+comments: true #默认不开启评论
 ---
 
 # 新建网站

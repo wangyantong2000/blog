@@ -12,7 +12,7 @@ copyright: Copyright &copy; 2022-2024 krahets<br>The website content is licensed
 theme:
   name: material
   favicon: img/favicon.png
-
+  custom_dir: docs/overrides
   logo: assets/favicon.png
   language: zh
   icon:
