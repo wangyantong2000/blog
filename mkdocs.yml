@@ -143,8 +143,9 @@ nav:
 
 plugins:
   - glightbox
-  - search:
-      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  # - search:
+  #     separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - search
   - git-revision-date-localized: # 支持文档创建时间显示， https://github.com/timvink/mkdocs-git-revision-date-localized-plugin
       locale: zh
       enable_creation_date: true
@@ -153,9 +154,12 @@ plugins:
         - index.md
         - tag.md
   - git-committers:
-      enabled: !ENV [CI, false]
+      # enabled: !ENV [CI, false]
       repository: wangyantong2000/blog
-      branch: master
+      branch: main
+      exclude:
+        - index.md
+        - tag.md
 
   - tags:
       tags_file: tag.md #分类标签

@@ -35,7 +35,7 @@ Material for MkDocs 可以使用`pip`来完成安装:
 
 这将自动安装所有依赖包的兼容版本：[MkDocs][1]，[Markdown][5]，[Pygments][6]和[pymdown-extensions][7]。Material for MkDocs 始终致力于支持最新版本，因此无需单独安装这些软件包。
 
-_注意，要安装内测版本 8，您需要成为赞助商，创建个人访问令牌[^1]，并设置_`GH_TOKEN`\_值的环境变量到 token's value。
+_注意，要安装内测版本，您需要成为赞助商，创建个人访问令牌[^1]，并设置_`GH_TOKEN`\_值的环境变量到 token's value。
 
 [^1]: 为了使用`pip`通过 HTTPS 从私有存储库进行安装，[个人访问令牌][14]需要[`repo`][15]范围。 创作并且只有在安装 Insiders 时才需要使用访问令牌通过 HTTPS，这是从 CI / CD 进行构建时的推荐方法工作流程，例如，使用 GitHub 页面或 GitLab 页面。
 
@@ -67,7 +67,7 @@ _注意，要安装内测版本 8，您需要成为赞助商，创建个人访�
 - [mkdocs-minify-plugin][11]
 - [mkdocs-redirects][12]
 
-_注意，要安装[内测版本][8]，您需要[成为赞助商][9]，创建个人访问令牌[^2]，并设置_`GH_TOKEN`\_值的环境变量到 token's value。
+_注意，要安装内测版本，您需要成为赞助商，创建个人访问令牌[^2]，并设置_`GH_TOKEN`\_值的环境变量到 token's value。
 
 [^2]: 如果是使用`docker`从[GitHub Container Registry][18]拉取私有的 Docker 镜像，[personal access token][14]需要[`read:packages`][15]范围。需要注意的是，在拉取前需要完成登录。例如，参考 workflow 的[`publish`][19]流程。同时也需要在账户中启用"[Improved Container Support][20]"
 
