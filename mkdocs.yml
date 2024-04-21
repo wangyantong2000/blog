@@ -140,7 +140,10 @@ nav:
   - 标签: tag.md
   - Blogger:
       - index: blog/index.md
-
+extra_css:
+  - stylesheets/extra.css # 自定义CSS
+  - https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css # font-awesome表情支持
+  - https://cdn.jsdelivr.net/npm/lxgw-wenkai-webfont@1.1.0/style.css #字体
 plugins:
   - glightbox
   # - search:
